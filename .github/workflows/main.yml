@@ -25,6 +25,7 @@ jobs:
          context: .
          push: true
          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:${{ github.sha }}
+         dockerfile: Dockerfile
             
   deploy:
     name: Deploy to EC2 on main branch push
